@@ -1,3 +1,3 @@
 # VibeVerse
 
-A content back-end application system built using Laravel, MySQL & REST Api
+A content backend application system built using Laravel, MySQL & REST Api
