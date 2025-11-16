@@ -10,7 +10,6 @@ return [
     | This option controls the default authentication "guard" and password
     | reset options for your application. You may change these defaults
     | as required, but they're a perfect start for most applications.
-    |
     */
 
     'defaults'=> [
@@ -35,10 +34,10 @@ return [
     |
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
+    'guards'=> [
+        'web'=> [
+            'driver'=> 'session',
+            'provider'=> 'users',
         ],
     ],
 
@@ -59,15 +58,15 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+    'providers'=> [
+        'users'=> [
+            'driver'=>'eloquent',
+            'model'=> App\Models\User::class,
         ],
 
         // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
+        // 'driver' => 'database',
+        // 'table' => 'users',
         // ],
     ],
 
