@@ -89,12 +89,12 @@ return [
     |
     */
 
-    'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_reset_tokens',
-            'expire' => 60,
-            'throttle' => 60,
+    'passwords'=> [
+        'users'=> [
+            'provider'=> 'users',
+            'table'=> 'password_reset_tokens',
+            'throttle'=> 60,
+            'expire'=> 60,
         ],
     ],
 
