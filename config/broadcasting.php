@@ -12,7 +12,6 @@ return [
     | any of the connections defined in the "connections" array below.
     |
     | Supported: "pusher", "ably", "redis", "log", "null"
-    |
     */
 
     'default' => env('BROADCAST_DRIVER', 'null'),
@@ -25,7 +24,6 @@ return [
     | Here you may define all of the broadcast connections that will be used
     | to broadcast events to other systems or over websockets. Samples of
     | each available type of connection are provided inside this array.
-    |
     */
 
     'connections' => [
@@ -37,12 +35,12 @@ return [
             'app_id' =>env('PUSHER_APP_ID'),
             'options' => [
                 
-                'host' => env('PUSHER_HOST') ?: 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com',
-                'port' => env('PUSHER_PORT', 443),
-                'scheme' => env('PUSHER_SCHEME', 'https'),
-                'cluster' => env('PUSHER_APP_CLUSTER'),
-                'encrypted' => true,
-                'useTLS' => env('PUSHER_SCHEME', 'https') === 'https',
+                'host' =>env('PUSHER_HOST') ?: 'api-'.env('PUSHER_APP_CLUSTER', 'mt1').'.pusher.com',
+                'scheme' =>env('PUSHER_SCHEME', 'https'),
+                'port' => env ('PUSHER_PORT', 444),
+                'cluster' =>env('PUSHER_APP_CLUSTER'),
+                'encrypted' =>true,
+                'useTLS' =>env('PUSHER_SCHEME', 'https') === 'https',
             ],
             'client_options' => [
                 // Guzzle client options
@@ -50,13 +48,14 @@ return [
         ],
 
         'ably' => [
-            'driver' => 'ably',
-            'key' => env('ABLY_KEY'),
+            
+            'key' =>env('ABLY_KEY'),
+            'driver' =>'ably',
         ],
 
         'redis' => [
-            'driver' => 'redis',
-            'connection' => 'default',
+            'driver' =>'redis',
+            'connection' =>'default',
         ],
 
         'log' => [
@@ -68,5 +67,4 @@ return [
         ],
 
     ],
-
 ];
