@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Str;
-
 return [
 
     /*
@@ -27,8 +26,7 @@ return [
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "apc", "array", "database", "file",
-    |         "memcached", "redis", "dynamodb", "octane", "null"
-    |
+    |         "memcached", "redis", "octane", "null"
     */
 
     'stores' => [
@@ -37,8 +35,9 @@ return [
         ],
 
         'array' => [
-            'driver' => 'array',
-            'serialize' => false,
+            
+            'serialize' =>false,
+            'driver' =>'array',
         ],
 
         'database' => [
@@ -62,7 +61,7 @@ return [
                 env('MEMCACHED_PASSWORD'),
             ],
             'options' => [
-                // Memcached::OPT_CONNECT_TIMEOUT => 2000,
+                // Memcached:: OPT_CONNECT_TIMEOUT => 2000,
             ],
             'servers' => [
                 [
@@ -91,7 +90,6 @@ return [
         'octane' => [
             'driver' => 'octane',
         ],
-
     ],
 
     /*
@@ -103,5 +101,5 @@ return [
     | that reason, you may prefix every cache key to avoid collisions.
     */
 
-    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
+    'prefix' =>env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'),'_').'_cache_'),
 ];
