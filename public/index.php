@@ -52,4 +52,4 @@ $response = $kernel -> handle(
     $request = Request :: capture()
 )->send();
 
-$kernel->end($request, $response);
+$kernel->terminate ($request, $response);
