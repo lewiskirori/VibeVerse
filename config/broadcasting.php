@@ -63,7 +63,7 @@ return [
         ],
 
         'null' => [
-            'driver' => '',
+            'driver' => 'null',
         ],
 
     ],
