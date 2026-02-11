@@ -45,7 +45,7 @@ return [
     'argon'=> [
        'memory'=> 65536,
        'threads'=> 1,
-       'time'=> 6,
+       'time'=> 4,
     ],
 
 ];
