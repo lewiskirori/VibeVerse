@@ -95,7 +95,7 @@ return [
         ],
 
         'stderr' => [
-            'driver' => 'monolog',
+            'driver' => 'stderr',
             'level' => env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
             'formatter' => env('LOG_STDERR_FORMATTER'),
